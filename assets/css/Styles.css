@@ -1,0 +1,188 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+	box-sizing: border-box;
+	
+}
+.middle-section{
+    display: flex;
+    flex-direction: row;
+}
+.form{
+    background-color: rgb(26, 52, 76);
+    width: 20%;
+    height: 660px;
+    padding: 10px;
+    margin-left: 5px;
+}
+label{
+    color: white;
+    padding: 3%;
+    
+}
+
+.number{
+    margin-left: 10%;
+}
+input[type=number]{
+	color: rgb(241, 177, 38);
+}
+.button{
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: rgb(241, 177, 38);
+    width: 85%;
+    cursor: pointer;
+    background-color: rgb(26, 52, 76);
+    padding: 2%;
+
+}
+select{
+    color: rgb(241, 177, 38);
+}
+.button1{
+    border-radius: 20px;
+    width: 85%;
+	cursor: pointer;
+	border-color: rgb(241, 177, 38);
+    background-color: rgb(26, 52, 76);
+    padding: 3%;
+    outline:none;
+}
+
+.button1 a:hover{
+    border-color: rgb(241, 177, 38); 
+
+}
+.active{
+    border-color: rgb(241, 177, 38);
+
+}
+.button1 option{
+    color: white;
+}
+.button2{
+    border-radius: 20px;
+    border: 1px solid;
+    border-color: rgb(241, 177, 38);
+    width: 85%;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    background-color:rgb(241, 177, 38);
+    padding: 2%;
+
+}
+h1{
+    color: white;
+    
+}
+.content{
+	background: #fffdd0;
+	width:100%;
+}
+.results{
+	margin: 10px;
+	width:100%;
+
+
+}
+.results p{
+	font-size: 25px;
+	margin: 8px;
+}
+table { 
+	width: 750px; 
+	border-collapse: collapse; 
+	margin:-15px 8px auto;
+	
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: rgb(255, 153, 153); 
+	}
+
+th { 
+	background: rgb(26, 52, 76); 
+	color: rgb(241, 177, 38); 
+	font-weight: bold; 
+	font-size: 25px;
+	}
+
+td, th { 
+	padding: 10px; 
+	/* border: 1px solid black;  */
+	text-align: left; 
+	font-size: 12px;
+	
+	}
+
+/* 
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px)  {
+
+	.button{
+		text-align: none;
+		width: 100%;
+		padding: 5%;
+	}
+	.button1{
+		text-align: none;
+		width: 100%;
+		padding: 5%;
+	}
+
+	.button2{
+		text-align: none;
+		width: 100%;
+		padding: 5%;
+	}
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		/* color: #000; */
+		font-weight: bold;
+	}
+
+}
