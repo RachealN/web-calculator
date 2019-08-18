@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=utf-8 />
+        <title>Web Developer Practical Interview</title>
+        <link rel="stylesheet" href="./assets/css/Styles.css">
+        <meta name="viewport" content="width=device-width,initial-scale"> 
+        <script src="assets/javascript/web.js"></script>
+      
+    </head>
+    <body>
+        <div class="middle-section">
+            <div class="form">
+                <form >
+                    <div class="number"> 
+                        <h1>Numbers</h1><br>
+                        
+                        <label for="fNumber">Number One </label>
+                        <input class="button" type="number" pattern="\d*" placeholder="Enter Number One" id="number1" required/><br><br>
+
+                        <label for="sNumber">Number two </label>
+                        <input class="button" type="number" pattern="\d*" placeholder="Enter Number Two" id="number2" required/><br><br>
+
+                        <label for="operation">operation</label>
+                        <select class="button1" id="operation" name="type" required>
+                            <option value="+">Add</option>
+                            <option value="-">Subtract</option>
+                            <option value="*">Multiply</option>
+                            <option value="/">Divide</option>        
+                        </select>
+
+                        <br><br>
+                        <input class="button2" type="button" value="Post" id="pst" onclick="performOperation()"/><br>
+                        <br>
+                    </div>
+                </form>
+            </div>
+            <div class="content">
+            <div class="results">
+                <span id = "result"></span>
+                <p>Results </p><br>
+             <div id="results_table"></div>
+            </div>
+          </div>
+    </body>
+</html>
